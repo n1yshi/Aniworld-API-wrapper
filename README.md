@@ -1,8 +1,6 @@
-# AniWorld Wrapper
+<h1>AniWorld Wrapper</h1>
 
-<p align="center">
-  <img src="./assets/readme-hero.jpg" alt="AniWorld visual" width="720" />
-</p>
+<img align="right" src="./assets/readme-hero.jpg" alt="AniWorld visual" width="360" />
 
 A clean, modular Node.js wrapper for AniWorld with:
 
@@ -13,6 +11,8 @@ A clean, modular Node.js wrapper for AniWorld with:
 - optional redirect resolution
 - optional language filtering
 - a simple black demo web app
+
+<br clear="right" />
 
 ## Install
 

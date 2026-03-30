@@ -1,6 +1,8 @@
-<img align="right" src="./assets/readme-hero.jpg" alt="AniWorld visual" width="220" style="margin-top: 18px;" />
-
 # AniWorld Wrapper
+
+<p align="center">
+  <img src="./assets/readme-hero.jpg" alt="AniWorld visual" width="720" />
+</p>
 
 A clean, modular Node.js wrapper for AniWorld with:
 

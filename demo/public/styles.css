@@ -1,0 +1,323 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 32%),
+    #000;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.page-title {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.search-shell {
+  width: min(100%, 520px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem;
+  align-items: end;
+}
+
+.search-input,
+.search-button,
+.result-card,
+.season-button,
+.episode-pill,
+.stream-button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 0.15rem 0.65rem;
+  font-size: 0.96rem;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0;
+}
+
+.search-input:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.34);
+}
+
+.search-button {
+  min-width: 4rem;
+  height: 2.35rem;
+  padding: 0 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  font-size: 0.86rem;
+}
+
+.search-button:hover,
+.result-card:hover,
+.season-button:hover,
+.episode-pill:hover,
+.stream-button:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.status {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  text-align: center;
+}
+
+.status.error {
+  color: rgba(255, 120, 120, 0.95);
+}
+
+.section {
+  width: min(100%, 900px);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hidden {
+  display: none;
+}
+
+.section-title {
+  margin: 0 0 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.results-list,
+.anime-detail {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.result-card {
+  width: 100%;
+  padding: 0.95rem 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+.result-card:hover,
+.result-card.active {
+  background: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.24);
+}
+
+.result-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.result-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.anime-summary {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+}
+
+.anime-poster {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+}
+
+.meta h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.meta p {
+  margin: 0 0 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+.inline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0 0 0.9rem;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.92rem;
+}
+
+.chip,
+.season-button,
+.episode-pill,
+.stream-button {
+  padding: 0.72rem 0.95rem;
+  font-size: 0.92rem;
+}
+
+.chip-row,
+.episodes-grid,
+.stream-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.74);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.86rem;
+}
+
+.season-button,
+.episode-pill,
+.stream-button {
+  cursor: pointer;
+  text-align: left;
+  border-radius: 0.7rem;
+}
+
+.season-button.active,
+.episode-pill.active {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stack h4 {
+  margin: 0 0 0.65rem;
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+}
+
+.stream-button small {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  margin-top: 0.35rem;
+}
+
+.player-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.player-head .panel-title {
+  margin: 0;
+}
+
+.player-head .section-title {
+  margin: 0;
+}
+
+.player-link {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+}
+
+.player-link.is-disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.player-wrap {
+  position: relative;
+  margin-top: 1rem;
+  min-height: 540px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+#player-frame {
+  width: 100%;
+  height: 540px;
+  border: 0;
+  display: none;
+  background: #000;
+}
+
+.player-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width: 980px) {
+  .anime-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .anime-poster {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 2rem 1rem;
+    align-content: start;
+  }
+
+  .search-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .search-button {
+    width: fit-content;
+  }
+}

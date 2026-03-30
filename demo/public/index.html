@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AniWorld Demo</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="page-title">AniWorld Demo</h1>
+
+      <form id="search-form" class="search-shell" autocomplete="off">
+        <input id="search-input" class="search-input" type="search" placeholder="Search">
+        <button class="search-button" type="submit">Enter</button>
+      </form>
+
+      <p id="status" class="status">Ready.</p>
+
+      <section id="results-panel" class="section hidden">
+        <h2 class="section-title">Results</h2>
+        <div id="results" class="results-list"></div>
+      </section>
+
+      <section id="anime-panel" class="section hidden">
+        <h2 class="section-title">Anime</h2>
+        <div id="anime-detail" class="anime-detail"></div>
+      </section>
+
+      <section id="player-panel" class="section hidden">
+        <div class="player-head">
+          <h2 class="section-title">Player</h2>
+          <a id="open-stream" class="player-link is-disabled" href="#" target="_blank" rel="noopener">Open stream</a>
+        </div>
+        <div class="player-wrap">
+          <iframe id="player-frame" title="Anime stream player" allowfullscreen referrerpolicy="no-referrer"></iframe>
+          <div id="player-placeholder" class="player-placeholder">Choose an episode and stream.</div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

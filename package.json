@@ -1,0 +1,42 @@
+{
+  "name": "aniworld-wrapper",
+  "version": "1.0.0",
+  "description": "AniWorld wrapper for anime search, details, episode lists, stream hosts, and redirect resolution.",
+  "type": "module",
+  "main": "./src/index.js",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "demo",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo/server.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "aniworld",
+    "anime",
+    "wrapper",
+    "scraper",
+    "stream",
+    "episodes",
+    "hoster",
+    "streaming"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

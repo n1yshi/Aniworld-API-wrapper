@@ -1,4 +1,4 @@
-<img align="right" src="./assets/readme-hero.jpg" alt="AniWorld visual" width="220" />
+<img align="right" src="./assets/readme-hero.jpg" alt="AniWorld visual" width="220" style="margin-top: 18px;" />
 
 # AniWorld Wrapper
 

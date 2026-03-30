@@ -1,6 +1,17 @@
+<table>
+  <tr>
+    <td>
+
 # AniWorld Wrapper
 
 A clean, modular Node.js wrapper for AniWorld with:
+
+    </td>
+    <td align="right">
+      <img src="https://i.pinimg.com/736x/45/4c/45/454c4560d08221c78b9db479614cb1a1.jpg" alt="AniWorld visual" width="220" />
+    </td>
+  </tr>
+</table>
 
 - anime search
 - anime details
